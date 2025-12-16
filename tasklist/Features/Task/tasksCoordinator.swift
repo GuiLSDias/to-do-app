@@ -11,7 +11,7 @@ import SwiftUICore
 final class TasksCoordinator {
 
     func start() -> some View {
-        let repository = TaskRepository()
+        let repository = TaskCoreDataRepository()
         let viewModel = TasksViewModel(userCase: repository)
         return TasksListView(viewModel: viewModel)
     }
